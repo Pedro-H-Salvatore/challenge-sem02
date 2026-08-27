@@ -1,14 +1,21 @@
+import { Outlet } from "react-router"
+import BarraNavegacao from "./components/BarraNavegacao"
+import Footer from "./components/Footer"
 
 
-function App() {
-  
+
+
+const App = ()=> {
+
 
   return (
     <div>
-      <div>
-        
-      </div>
+      <BarraNavegacao/>
+        <Outlet />
+        <Footer/>
     </div>
+        
+      
   )
 }
 
