@@ -13,6 +13,7 @@ import Error from './routes/Error/index.tsx'
 import ComoFunciona from './routes/ComoFunciona/index.tsx'
 
 
+
 const router = createBrowserRouter([
   {path:'/', element:<App/>, errorElement:<Error/>,children:[
     {path:"/", element:<Inicio/>},

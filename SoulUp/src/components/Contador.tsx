@@ -31,7 +31,7 @@ export default function Contador({ numero, info }: Contador) {
     return (
         <div className="w-1/4 h-30 border-r border-gray-300">
             <div className="flex flex-col items-center mt-8">
-                <h2 className="text-3xl">{contador.toLocaleString("pt-BR")}</h2>
+                <h2 className="text-3xl bg-linear-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">{contador.toLocaleString("pt-BR")}</h2>
                 <p className="text-sm pt-2 text-gray-400">{info}</p>
             </div>
         </div>
