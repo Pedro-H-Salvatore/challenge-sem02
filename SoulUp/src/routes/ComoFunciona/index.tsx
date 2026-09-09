@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-
-export default function ComoFunciona (){
-
-
-    return (
-
-        <div>
-            
-        </div>
-    )
-=======
 import CardComoFunciona from "../../components/CardComoFunciona";
 
 export default function ComoFunciona() {
@@ -63,5 +51,5 @@ export default function ComoFunciona() {
       </div>
     </section>
   );
->>>>>>> origin/PedroSalvatore-RM569497
+
 }
