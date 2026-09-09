@@ -1,5 +1,7 @@
 import Contador from "../../components/Contador";
 import HeroHome from "../../components/HeroHome";
+import ComoFunciona from "../ComoFunciona";
+import Recompensas from "../Recompensas";
 
 
 const Inicio = () => {
@@ -33,6 +35,8 @@ const Inicio = () => {
                 />
 
             </section>
+            <ComoFunciona/>
+            <Recompensas/>
         </div>
     )
 };
