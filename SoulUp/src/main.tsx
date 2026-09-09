@@ -12,6 +12,7 @@ import Dashboard from "./routes/Dashboard/Dashboard.tsx"
 import Error from './routes/Error/index.tsx'
 
 
+
 const router = createBrowserRouter([
   {path:'/', element:<App/>, errorElement:<Error/>,children:[
     {path:"/", element:<Inicio/>},
