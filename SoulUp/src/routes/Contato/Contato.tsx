@@ -1,5 +1,5 @@
 import FormularioContato from "../../components/FormularioContato";
-import InformacoesContato from "../../components/InformacoesContato";
+import InformacoesContato from "../../components/";
 
 export default function Contato() {
   return (
