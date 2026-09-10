@@ -24,7 +24,7 @@ export default function Dashboard() {
       pontos: anterior.pontos + acao.pontos,
       acoes: anterior.acoes + 1,
       atividades: [atividade, ...anterior.atividades].slice(0, 5),
-      aviso: ${acao.atividade} registrada: +${acao.pontos} pontos. Total: ${(anterior.pontos + acao.pontos).toLocaleString("pt-BR")} pontos.,
+     aviso: `${acao.atividade} registrada: +${acao.pontos} pontos. Total: ${(anterior.pontos + acao.pontos).toLocaleString("pt-BR")} pontos.`,
     }));
   }
 
