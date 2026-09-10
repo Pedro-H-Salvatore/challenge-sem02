@@ -6,8 +6,8 @@ import ProgressoNivel from "../../components/ProgressoNivel";
 import AcoesRapidas from "../../components/AcoesRapidas";
 import AtividadesRecentes from "../../components/AtividadesRecentes";
 import ConquistasDashboard from "../../components/ConquistasDashboard";
-import { atividadesIniciais } from "./dadosDashboard";
-import type { AcaoRapida } from "./dadosDashboard";
+import { atividadesIniciais } from "./DadosDashboard";
+import type { AcaoRapida } from "./DadosDashboard";
 
 export default function Dashboard() {
   const [estado, setEstado] = useState({ pontos: 1240, acoes: 34, atividades: atividadesIniciais, aviso: "" });
