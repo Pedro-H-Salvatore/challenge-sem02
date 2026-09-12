@@ -5,6 +5,7 @@ const links = [
   { destino: "/ranking", titulo: "Ranking", icone: "🏆" },
   { destino: "/faq", titulo: "Ajuda", icone: "❓" },
   { destino: "/contato", titulo: "Contato", icone: "📬" },
+  { destino: "/equipe", titulo: "Equipe", icone: "👥" },
 ];
 
 export default function BarraLateralDashboard({
@@ -64,9 +65,6 @@ export default function BarraLateralDashboard({
             </NavLink>
           ))}
 
-          <span className="px-4 py-4 text-slate-400">
-            👥 Equipe <span className="text-xs">(em breve)</span>
-          </span>
         </nav>
       </div>
     </aside>
