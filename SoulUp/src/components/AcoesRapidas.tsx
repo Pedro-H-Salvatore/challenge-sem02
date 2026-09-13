@@ -1,5 +1,5 @@
-import { acoesRapidas } from "../routes/Dashboard/DadosDashboard";
-import type { AcaoRapida } from "../routes/Dashboard/DadosDashboard";
+import { acoesRapidas } from "../pages/Dashboard/DadosDashboard";
+import type { AcaoRapida } from "../pages/Dashboard/DadosDashboard";
 import PainelDashboard from "./PainelDashboard";
 
 export default function AcoesRapidas({ aoRegistrar }: { aoRegistrar: (acao: AcaoRapida) => void }) {

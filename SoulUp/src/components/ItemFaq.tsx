@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { PerguntaFaq } from "../routes/Faq/dadosFaq";
+import type { PerguntaFaq } from "../pages/Faq/dadosFaq";
 
 export default function ItemFaq({ id, pergunta, resposta }: PerguntaFaq) {
   const [aberto, setAberto] = useState(false);

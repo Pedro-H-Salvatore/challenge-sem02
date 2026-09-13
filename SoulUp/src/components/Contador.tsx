@@ -12,6 +12,7 @@ export default function Contador({ numero, info }: Contador) {
     useEffect(() => {
         const duracao = 2000
         const inicio = performance.now()
+        let animacao = 0
 
         function animar(tempoAtual: number) {
             const tempoDecorrido = tempoAtual - inicio
@@ -20,13 +21,13 @@ export default function Contador({ numero, info }: Contador) {
             setContador(Math.floor(numero * progresso))
 
             if (progresso < 1) {
-                requestAnimationFrame(animar)
+                animacao = requestAnimationFrame(animar)
             }
 
         }
-        const animacao = requestAnimationFrame(animar)
+        animacao = requestAnimationFrame(animar)
         return () => cancelAnimationFrame(animacao)
-    }, [])
+    }, [numero])
 
     return (
         <div className="min-w-0 px-2 py-5 text-center">

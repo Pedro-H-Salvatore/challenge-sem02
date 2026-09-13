@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# O lockfile deve acompanhar o projeto para permitir npm ci após o clone.
+!package-lock.json

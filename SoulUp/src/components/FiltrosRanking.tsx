@@ -1,5 +1,5 @@
-import { categorias } from "../routes/Ranking/dadosRanking";
-import type { Categoria } from "../routes/Ranking/dadosRanking";
+import { categorias } from "../pages/Ranking/dadosRanking";
+import type { Categoria } from "../pages/Ranking/dadosRanking";
 
 interface Props {
   selecionada: Categoria;

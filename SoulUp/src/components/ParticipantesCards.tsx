@@ -1,6 +1,7 @@
 type ParticipantesCardsProps = {
   nome: string;
   rm: string;
+  turma: string;
   email: string;
   foto: string;
   github: string;
@@ -8,7 +9,7 @@ type ParticipantesCardsProps = {
 };
 
 export default function ParticipantesCards({
-  nome, rm, email, foto, github, linkedin,
+  nome, rm, turma, email, foto, github, linkedin,
 }: ParticipantesCardsProps) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -30,7 +31,7 @@ export default function ParticipantesCards({
           {email}
         </a>
         <p className="mt-5 rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-500">
-          RM: {rm}
+          RM: {rm} · {turma}
         </p>
       </div>
       <div className="grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200">

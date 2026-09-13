@@ -31,7 +31,7 @@ export default function Ranking() {
         <div className="space-y-4">
           <FiltrosRanking selecionada={categoria} aoSelecionar={setCategoria} />
           <p className="text-sm text-slate-500">
-            Dados de demonstração. Os filtros agrupam participantes pela categoria principal.
+            Dados de demonstração. Os filtros agrupam participantes pela categoria principal. Selecione um nome para ver os detalhes.
           </p>
         </div>
         <PodioRanking participantes={classificados} />

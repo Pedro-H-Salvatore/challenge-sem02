@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { premios } from "../../data/premios";
 import CardRecompensa from "../../components/CardRecompensa";
 
 export default function Recompensas() {
@@ -23,39 +24,23 @@ export default function Recompensas() {
           </h2>
 
           <p className="mt-3 text-base text-slate-500 sm:text-lg">
-            Os melhores do ranking ganham recompensas reais todo mês
+            Proposta de prêmios mensais. Esta demonstração não concede recompensas reais.
           </p>
         </header>
 
         {/* Cards */}
         <div className="mt-14 grid gap-7 lg:grid-cols-3">
-          <CardRecompensa
-            medalha="🥇"
-            posicao="1º Lugar"
-            titulo="Subsídio de Energia"
-            descricao="Desconto real na sua conta de energia elétrica pelo Programa Prospera."
-            valor="R$ 150"
-            complementoValor="/ mês"
-            corBorda="border-yellow-400"
-          />
-
-          <CardRecompensa
-            medalha="🥈"
-            posicao="2º Lugar"
-            titulo="Vale Presente"
-            descricao="Vale presente em lojas parceiras do Programa Prospera para você escolher."
-            valor="R$ 80"
-            corBorda="border-slate-400"
-          />
-
-          <CardRecompensa
-            medalha="🥉"
-            posicao="3º Lugar"
-            titulo="Desconto Serviços"
-            descricao="Desconto em serviços e produtos sustentáveis de parceiros da plataforma."
-            valor="R$ 40"
-            corBorda="border-orange-500"
-          />
+          {premios.map((premio) => (
+            <CardRecompensa
+              key={premio.posicao}
+              medalha={premio.medalha}
+              posicao={`${premio.posicao}º Lugar`}
+              titulo="Subsídio de Energia"
+              descricao={premio.descricao}
+              valor={`R$ ${premio.valor}`}
+              corBorda={premio.corBorda}
+            />
+          ))}
         </div>
 
         {/* Botão */}

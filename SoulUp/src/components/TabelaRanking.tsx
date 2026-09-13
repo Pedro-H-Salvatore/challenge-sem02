@@ -1,4 +1,5 @@
-import type { Participante } from "../routes/Ranking/dadosRanking";
+import { Link } from "react-router";
+import type { Participante } from "../pages/Ranking/dadosRanking";
 
 function LinhaRanking({ pessoa, posicao, mostrarTendencia }: {
   pessoa: Participante;
@@ -14,7 +15,7 @@ function LinhaRanking({ pessoa, posicao, mostrarTendencia }: {
       <th scope="row" className="px-5 py-5 text-left font-inherit">
         <span className="flex items-center gap-3">
           <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#2ECC71] to-[#3498DB]">🌿</span>
-          {pessoa.nome}{pessoa.voce && " (você)"}
+          <Link to={`/ranking/${pessoa.id}`} className="underline decoration-emerald-500 underline-offset-4 hover:text-emerald-700 focus-visible:outline-2">{pessoa.nome}{pessoa.voce && " (você)"}</Link>
         </span>
       </th>
       <td className="px-5 py-5">{pessoa.cidade}</td>

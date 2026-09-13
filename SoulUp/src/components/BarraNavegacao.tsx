@@ -51,7 +51,7 @@ const BarraNavegacao = () => {
         </div>
 
         {/* Links */}
-        <nav aria-label="Navegação principal" className="order-3 grid w-full grid-cols-2 gap-1 sm:flex sm:flex-wrap sm:justify-center sm:gap-2 xl:order-none xl:w-auto">
+        <nav aria-label="Navegação principal" className="order-3 grid w-full grid-cols-2 gap-1 sm:flex sm:flex-wrap sm:justify-center sm:gap-2 2xl:order-none 2xl:w-auto">
           <NavLink
             to="/"
             end
@@ -75,6 +75,9 @@ const BarraNavegacao = () => {
           >
             Recompensas
           </Link>
+
+          <NavLink to="/sobre" className={estiloLink}>Sobre</NavLink>
+          <NavLink to="/equipe" className={estiloLink}>Integrantes</NavLink>
 
           <NavLink
             to="/ranking"

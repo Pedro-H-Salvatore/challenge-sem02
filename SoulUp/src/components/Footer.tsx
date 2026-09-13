@@ -17,7 +17,7 @@ const Footer = () => {
                     <div className="flex flex-col p-4">
                         <h2 className="text-white">Navegação</h2>
 
-                        <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/#como-funciona"}>Sobre</Link>
+                        <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/sobre"}>Sobre</Link>
                         <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/equipe"}>Integrantes</Link>
                         <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/faq"}>FAQ</Link>
                         <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/contato"}>Contato</Link>
@@ -25,8 +25,8 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col p-4">
                         <h2 className="text-white">Siga-nos</h2>
-                        <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={""}>GitHub</Link>
-                        <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={""}>LinkedIn</Link>
+                        <a className="inline-flex min-h-11 items-center text-white/60 hover:text-white" href="https://github.com/Pedro-H-Salvatore/challenge-sem02" target="_blank" rel="noopener noreferrer">GitHub do projeto ↗</a>
+                        <Link className="inline-flex min-h-11 items-center text-white/60 hover:text-white" to={"/equipe"}>LinkedIn dos integrantes</Link>
 
                     </div>
                 </div>

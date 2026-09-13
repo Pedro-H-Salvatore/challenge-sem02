@@ -1,34 +1,41 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './global.css'
-import App from './App.tsx'
-
-import { createBrowserRouter, RouterProvider, } from 'react-router'
-import Inicio from "./routes/Inicio/Inicio.tsx"
-import Ranking from "./routes/Ranking/Ranking.tsx"
-import Faq from "./routes/Faq/Faq.tsx"
-import Contato from "./routes/Contato/Contato.tsx"
-import Dashboard from "./routes/Dashboard/Dashboard.tsx"
-import Error from './routes/Error/index.tsx'
-import ComoFunciona from './routes/ComoFunciona/index.tsx'
-import Equipe from './routes/Equipe/Equipe.tsx'
-
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import "./global.css";
+import App from "./App";
+import Inicio from "./pages/Inicio/Inicio";
+import Ranking from "./pages/Ranking/Ranking";
+import DetalheRanking from "./pages/Ranking/DetalheRanking";
+import Faq from "./pages/Faq/Faq";
+import Contato from "./pages/Contato/Contato";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Error from "./pages/Error";
+import ComoFunciona from "./pages/ComoFunciona";
+import Equipe from "./pages/Equipe/Equipe";
+import Sobre from "./pages/Sobre/Sobre";
 
 const router = createBrowserRouter([
-  {path:'/', element:<App/>, errorElement:<Error/>,children:[
-    {path:"/", element:<Inicio/>},
-    {path:"/ranking", element:<Ranking />},
-    {path:"/faq", element:<Faq />},
-    {path:"/contato", element:<Contato />},
-    {path:"/dashboard", element:<Dashboard />},
-    {path:"/equipe", element:<Equipe />},
-    {path:"/como-funciona", element:<ComoFunciona/>}
-  ]}
-])
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      { index: true, element: <Inicio /> },
+      { path: "sobre", element: <Sobre /> },
+      { path: "ranking", element: <Ranking /> },
+      { path: "ranking/:id", element: <DetalheRanking /> },
+      { path: "faq", element: <Faq /> },
+      { path: "contato", element: <Contato /> },
+      { path: "dashboard", element: <Dashboard /> },
+      { path: "equipe", element: <Equipe /> },
+      { path: "como-funciona", element: <ComoFunciona /> },
+      { path: "*", element: <Error /> },
+    ],
+  },
+]);
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-      <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
-)
+);

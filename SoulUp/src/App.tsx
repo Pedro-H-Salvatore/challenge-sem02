@@ -10,7 +10,7 @@ const App = ()=> {
 
 
   return (
-    <div>
+    <div className="min-h-screen wrap-anywhere">
       <ScrollToHash />
       <BarraNavegacao/>
         <Outlet />

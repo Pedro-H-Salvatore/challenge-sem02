@@ -11,7 +11,13 @@ export default function ScrollToHash() {
         : "smooth";
 
       if (hash) {
-        document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({
+        let destino = hash.slice(1);
+        try {
+          destino = decodeURIComponent(destino);
+        } catch {
+          // Uma âncora malformada não deve interromper a navegação.
+        }
+        document.getElementById(destino)?.scrollIntoView({
           behavior,
           block: "start",
         });

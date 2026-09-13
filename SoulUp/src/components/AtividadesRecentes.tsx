@@ -1,4 +1,4 @@
-import type { Atividade } from "../routes/Dashboard/DadosDashboard";
+import type { Atividade } from "../pages/Dashboard/DadosDashboard";
 import PainelDashboard from "./PainelDashboard";
 
 export default function AtividadesRecentes({ atividades }: { atividades: Atividade[] }) {
