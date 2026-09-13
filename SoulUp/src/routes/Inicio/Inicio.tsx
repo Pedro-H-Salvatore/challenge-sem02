@@ -9,7 +9,7 @@ const Inicio = () => {
     return (
         <div className="font-bold">
             <HeroHome />
-            <section className="flex justify-center items-center pt-2">
+            <section className="mx-auto grid max-w-7xl grid-cols-2 px-4 py-6 sm:grid-cols-4">
                 {/* 12400 usuarios ativos */}
                 <Contador
                     numero={12400}

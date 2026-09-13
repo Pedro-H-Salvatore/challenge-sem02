@@ -10,7 +10,7 @@ interface DadosContato {
 }
 
 const assuntos = ["Dúvida", "Sugestão", "Problema técnico", "Recompensas", "Parcerias", "Outro"];
-const estiloCampo = "w-full rounded-xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 aria-invalid:border-red-500";
+const estiloCampo = "min-w-0 w-full rounded-xl border border-slate-200 bg-white px-5 py-4 text-slate-900 outline-none placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 aria-invalid:border-red-500";
 
 export default function FormularioContato() {
   const [aviso, setAviso] = useState("");
@@ -24,7 +24,7 @@ export default function FormularioContato() {
   };
 
   return (
-    <section aria-labelledby="titulo-formulario" className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+    <section aria-labelledby="titulo-formulario" className="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
       <h2 id="titulo-formulario" className="mb-8 text-3xl font-bold text-slate-900">Envie uma Mensagem</h2>
       <form noValidate onSubmit={handleSubmit(validarMensagem, () => setAviso(""))} onChange={() => setAviso("")} className="space-y-7">
         <CampoContato id="contato-nome" titulo="Nome completo" erro={errors.nome?.message}>

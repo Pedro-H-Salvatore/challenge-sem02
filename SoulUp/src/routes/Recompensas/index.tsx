@@ -28,7 +28,7 @@ export default function Recompensas() {
         </header>
 
         {/* Cards */}
-        <div className="mt-14 grid gap-7 md:grid-cols-3">
+        <div className="mt-14 grid gap-7 lg:grid-cols-3">
           <CardRecompensa
             medalha="🥇"
             posicao="1º Lugar"

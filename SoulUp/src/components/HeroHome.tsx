@@ -8,7 +8,7 @@ export default function HeroHome() {
         navigate("/dashboard")
     }
     return (
-        <section className="relative min-h-184 overflow-hidden bg-[#17172b] px-6">
+        <section className="relative overflow-hidden bg-[#17172b] px-4 sm:px-6">
 
             <div className="absolute -bottom-40 -left-40 size-136 rounded-full bg-blue-500/20 blur-3xl" />
 
@@ -16,12 +16,12 @@ export default function HeroHome() {
             <div className="absolute -right-32 top-0 size-136 rounded-full bg-emerald-500/15 blur-3xl" />
 
 
-            <div className="relative z-10 mx-auto flex min-h-184 max-w-5xl flex-col items-center justify-center text-center">
-                <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-6 py-2 font-semibold text-emerald-400">
+            <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center py-16 text-center sm:min-h-160 sm:py-20 lg:min-h-184">
+                <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400 sm:px-6 sm:text-base">
                     🌱 Plataforma de Sustentabilidade
                 </span>
 
-                <h1 className="mt-10 text-4xl font-extrabold leading-tight text-white sm:text-6xl lg:text-7xl">
+                <h1 className="mt-8 text-3xl font-extrabold leading-tight text-white sm:text-6xl lg:text-7xl">
                     Transforme Hábitos em
                     <span className="mt-2 block bg-linear-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
                         Impacto Real
@@ -33,7 +33,7 @@ export default function HeroHome() {
                     reais — incluindo desconto na conta de energia.
                 </p>
 
-                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <div className="mt-10 flex w-full max-w-sm flex-col gap-4 sm:w-auto sm:max-w-none sm:flex-row">
                     <button
                         onClick={() => botaoHero()}
                         className="rounded-full bg-linear-to-r from-emerald-400 to-sky-500 px-9 py-4 font-bold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-1 hover:shadow-xl">

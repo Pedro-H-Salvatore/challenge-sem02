@@ -14,7 +14,7 @@ export default function CardComoFunciona({
   descricao,
 }: CardComoFuncionaProps) {
   return (
-    <article className="min-h-80 rounded-3xl bg-white p-10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <article className="min-w-0 rounded-3xl bg-white p-6 sm:min-h-80 sm:p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
       <span className="text-4xl">{icone}</span>
 
       <p className="mt-5 text-sm font-bold text-emerald-500">

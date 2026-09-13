@@ -18,7 +18,7 @@ export default function ConquistasDashboard({
 
   return (
     <PainelDashboard titulo="🏅 Conquistas">
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 xl:grid-cols-2 2xl:grid-cols-4">
         {conquistas.map((conquista) => (
           <li
             key={conquista.titulo}

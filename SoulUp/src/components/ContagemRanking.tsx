@@ -18,14 +18,14 @@ export default function ContagemRanking({ encerramento }: { encerramento: number
 
   return (
     <section aria-label="Prazo da competição" className="rounded-3xl bg-[#1A1A2E] px-6 py-7 text-white sm:px-8">
-      <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
         <p className="text-lg text-slate-300">
           ⏱ {segundos > 0 ? "Ranking fecha em:" : "Competição encerrada"}
         </p>
-        <div className="flex gap-3">
+        <div className="grid w-full max-w-sm grid-cols-4 gap-2 md:w-auto md:gap-3">
           {unidades.map(({ nome, valor }) => (
-            <div key={nome} className="min-w-14 rounded-xl bg-white/10 px-3 py-4 text-center sm:min-w-20">
-              <p className="text-3xl font-bold tabular-nums text-[#2ECC71]">{String(valor).padStart(2, "0")}</p>
+            <div key={nome} className="min-w-0 rounded-xl bg-white/10 px-1 py-4 text-center sm:min-w-16 sm:px-3">
+              <p className="text-2xl font-bold tabular-nums sm:text-3xl text-[#2ECC71]">{String(valor).padStart(2, "0")}</p>
               <p className="mt-2 text-xs text-slate-300">{nome}</p>
             </div>
           ))}

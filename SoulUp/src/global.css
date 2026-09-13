@@ -1,1 +1,12 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

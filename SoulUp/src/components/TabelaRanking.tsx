@@ -40,7 +40,7 @@ export default function TabelaRanking({ participantes, mostrarTendencia }: {
   if (!restantes.length) return <p className="text-center text-slate-500">Todos os participantes desta categoria estão no pódio.</p>;
 
   return (
-    <div role="region" aria-label="Tabela de classificação" tabIndex={0} className="overflow-x-auto rounded-2xl shadow-sm">
+    <div role="region" aria-label="Tabela de classificação" tabIndex={0} className="max-w-full overflow-x-auto rounded-2xl shadow-sm focus-visible:outline-2 focus-visible:outline-emerald-600">
       <table className="w-full min-w-212.5 text-sm text-slate-900 lg:text-base">
         <caption className="sr-only">Classificação a partir do quarto lugar. Os três primeiros estão no pódio.</caption>
         <thead className="bg-[#1A1A2E] text-left text-sm tracking-wide text-slate-300">

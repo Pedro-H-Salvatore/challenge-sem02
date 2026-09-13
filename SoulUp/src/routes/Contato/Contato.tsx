@@ -10,7 +10,7 @@ export default function Contato() {
           Tire suas dúvidas, envie sugestões ou entre em contato com nossa equipe.
         </p>
       </header>
-      <div className="mx-auto grid max-w-7xl items-start gap-8 px-4 py-12 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 px-4 py-12 sm:px-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-12">
         <FormularioContato />
         <InformacoesContato />
       </div>

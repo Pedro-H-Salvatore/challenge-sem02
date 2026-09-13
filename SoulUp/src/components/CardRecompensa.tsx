@@ -22,7 +22,7 @@ export default function CardRecompensa({
   return (
     <article
       className={`
-        flex min-h-76 flex-col rounded-2xl border-2 bg-white p-8
+        flex min-w-0 flex-col rounded-2xl border-2 bg-white p-6 sm:min-h-76 sm:p-8
         shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg
         ${corBorda}
       `}

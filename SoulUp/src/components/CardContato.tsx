@@ -6,7 +6,7 @@ interface CardProps {
 
 function CardContato({ icone, titulo, descricao }: CardProps) {
   return (
-    <article className="flex items-start gap-5 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+    <article className="flex min-w-0 items-start gap-3 sm:gap-5 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
       <span aria-hidden="true" className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-[#2ECC71] to-[#3498DB] text-xl">{icone}</span>
       <div className="min-w-0">
         <h3 className="font-bold text-slate-900">{titulo}</h3>
@@ -31,7 +31,7 @@ const redes = [
 
 export default function InformacoesContato() {
   return (
-    <aside aria-label="Informações de contato" className="space-y-6">
+    <aside aria-label="Informações de contato" className="min-w-0 space-y-6">
       {contatos.map((contato) => <CardContato key={contato.titulo} {...contato} />)}
       <div>
         <h2 className="mb-4 font-bold text-slate-900">Nossas redes</h2>
