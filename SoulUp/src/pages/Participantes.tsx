@@ -2,29 +2,29 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import {
-  Carregando,
-  ListaVazia,
-  MensagemErro,
+    Carregando,
+    ListaVazia,
+    MensagemErro,
 } from "../../components/EstadoTela";
 import { useRequisicao } from "../../hooks/useRequisicao";
 import { usuarioService } from "../../services/usuarioService";
 import type { Usuario, UsuarioForm } from "../../types/api";
 
 const formularioVazio: UsuarioForm = {
-  nome: "",
-  email: "",
+    nome: "",
+    email: "",
 };
 
 type Mensagem = {
-  tipo: "sucesso" | "erro";
-  texto: string;
+    tipo: "sucesso" | "erro";
+        texto: string;
 };
 
 export default function Participantes() {
-  const { estado, recarregar } = useRequisicao(
+    const { estado, recarregar } = useRequisicao(
     () => usuarioService.listar(),
     []
-  );
+    );
 
   const [form, setForm] = useState<UsuarioForm>(formularioVazio);
   const [emEdicao, setEmEdicao] = useState<number | null>(null);
