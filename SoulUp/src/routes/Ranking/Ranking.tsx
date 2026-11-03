@@ -30,3 +30,27 @@ export default function Ranking() {
         </h1>
         <p className="mt-5 text-lg text-white">Os campeões da sustentabilidade — {mes}</p>
       </header>
+
+       <div className="mx-auto max-w-7xl space-y-10 px-4 pb-16 sm:px-8">
+        <ContagemRanking encerramento={encerramento} />
+        <div className="space-y-4">
+          <FiltrosRanking selecionada={categoria} aoSelecionar={setCategoria} />
+          <p className="text-sm text-slate-500">Ranking em tempo real. Filtre por nível e selecione um nome para ver o perfil.</p>
+        </div>
+
+        {estado.status === "carregando" && <Carregando texto="Carregando ranking..." />}
+        {estado.status === "erro" && <MensagemErro mensagem={estado.mensagem} aoTentarNovamente={recarregar} />}
+        {estado.status === "sucesso" && (classificados.length === 0
+          ? <ListaVazia texto="Nenhum participante neste nível ainda." />
+          : (
+            <>
+              <PodioRanking participantes={classificados} />
+              <TabelaRanking participantes={classificados} mostrarTendencia={false} />
+            </>
+          ))}
+
+        <PremiosRanking />
+      </div>
+    </main>
+  );
+}
