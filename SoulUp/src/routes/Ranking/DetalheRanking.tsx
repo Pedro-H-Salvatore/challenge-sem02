@@ -50,3 +50,48 @@ export default function DetalheRanking() {
     { titulo: "Ações registradas", valor: String(pessoa.totalAcoes) },
     { titulo: "Membro desde", valor: formatarData(pessoa.dataCadastro) },
   ];
+
+    return (
+    <main className="min-h-[70vh] bg-slate-100 px-4 py-12 sm:px-8">
+      <article className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+        <p className="text-sm font-semibold text-emerald-700">PERFIL NO RANKING</p>
+        <h1 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">{pessoa.nome}</h1>
+        <p className="mt-3 break-all text-slate-600">{pessoa.email}</p>
+
+
+
+        <dl className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {indicadores.map((indicador) => (
+            <div key={indicador.titulo} className="rounded-2xl bg-slate-100 p-5">
+              <dt className="text-sm text-slate-600">{indicador.titulo}</dt>
+              <dd className="mt-2 text-2xl font-bold text-emerald-700">{indicador.valor}</dd>
+            </div>
+          ))}
+        </dl>
+
+
+
+        <h2 className="mt-10 text-xl font-bold text-slate-900">Histórico de ações</h2>
+        <div className="mt-4">
+          {pessoa.registros.length === 0 ? (
+            <ListaVazia texto="Este participante ainda não registrou ações." />
+          ) : (
+            <ul className="space-y-3">
+              {pessoa.registros.map((registro) => (
+                <li key={registro.id} className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-slate-100 p-4 text-sm">
+                  <span className="font-medium text-slate-900">{registro.nomeAcao}</span>
+                  <span className="text-slate-500">{formatarData(registro.dataRegistro)}</span>
+                  <strong className="text-emerald-600">+{registro.pontos} pts</strong>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+
+
+        <button type="button" onClick={() => navigate("/ranking")} className="mt-8 cursor-pointer rounded-full bg-[#1A1A2E] px-6 py-3 font-semibold text-white hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-4">Voltar ao ranking</button>
+      </article>
+    </main>
+  );
+}
