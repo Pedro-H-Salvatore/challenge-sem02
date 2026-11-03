@@ -4,7 +4,10 @@ import FiltrosRanking from "../../components/FiltrosRanking";
 import PodioRanking from "../../components/PodioRanking";
 import TabelaRanking from "../../components/TabelaRanking";
 import PremiosRanking from "../../components/PremioRanking";
-import { participantes } from "./dadosRanking";
+import { Carregando, ListaVazia, MensagemErro } from "../../components/EstadoTela";
+import { useRequisicao } from "../../hooks/useRequisicao";
+import { usuarioService } from "../../services/usuarioService";
+import { paraParticipante } from "./dadosRanking";
 import type { Categoria } from "./dadosRanking";
 
 export default function Ranking() {
@@ -12,9 +15,11 @@ export default function Ranking() {
   const [referencia] = useState(() => new Date());
   const encerramento = new Date(referencia.getFullYear(), referencia.getMonth() + 1, 1).getTime();
   const mes = referencia.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
-  const classificados = participantes
-    .filter((pessoa) => categoria === "Geral" || pessoa.categoria === categoria)
-    .sort((a, b) => b.pontos - a.pontos);
+
+  const { estado, recarregar } = useRequisicao(() => usuarioService.ranking(), []);
+  const classificados = estado.status === "sucesso"
+    ? estado.dados.map(paraParticipante).filter((p) => categoria === "Geral" || p.categoria === categoria)
+    : [];
 
   return (
     <main className="bg-slate-100">
@@ -25,19 +30,3 @@ export default function Ranking() {
         </h1>
         <p className="mt-5 text-lg text-white">Os campeões da sustentabilidade — {mes}</p>
       </header>
-
-      <div className="mx-auto max-w-7xl space-y-10 px-4 pb-16 sm:px-8">
-        <ContagemRanking encerramento={encerramento} />
-        <div className="space-y-4">
-          <FiltrosRanking selecionada={categoria} aoSelecionar={setCategoria} />
-          <p className="text-sm text-slate-500">
-            Dados de demonstração. Os filtros agrupam participantes pela categoria principal.
-          </p>
-        </div>
-        <PodioRanking participantes={classificados} />
-        <TabelaRanking participantes={classificados} mostrarTendencia={categoria === "Geral"} />
-        <PremiosRanking />
-      </div>
-    </main>
-  );
-}
