@@ -86,6 +86,8 @@ const BarraNavegacao = () => {
             Ranking
           </NavLink>
 
+          <NavLink to="/participantes" className={estiloLink}>Participantes</NavLink>
+
           <NavLink
             to="/faq"
             className={estiloLink}

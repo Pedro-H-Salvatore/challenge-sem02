@@ -9,6 +9,7 @@ import DetalheRanking from "./pages/Ranking/DetalheRanking";
 import Faq from "./pages/Faq/Faq";
 import Contato from "./pages/Contato/Contato";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Participantes from "./pages/Participantes/Participantes";
 import Error from "./pages/Error";
 import ComoFunciona from "./pages/ComoFunciona";
 import Equipe from "./pages/Equipe/Equipe";
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "faq", element: <Faq /> },
       { path: "contato", element: <Contato /> },
       { path: "dashboard", element: <Dashboard /> },
+      { path: "participantes", element: <Participantes /> },
       { path: "equipe", element: <Equipe /> },
       { path: "como-funciona", element: <ComoFunciona /> },
       { path: "*", element: <Error /> },
