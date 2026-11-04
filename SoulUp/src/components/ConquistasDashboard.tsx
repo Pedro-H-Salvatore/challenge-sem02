@@ -11,7 +11,7 @@ export default function ConquistasDashboard({
     { icone: "♻️", titulo: "Mestre Reciclagem", liberada: true },
     { icone: "⚡", titulo: "Eco Iniciante", liberada: true },
     { icone: "🏆", titulo: "Top 10", liberada: false },
-    { icone: "🌳", titulo: "Guardião Verde", liberada: pontos >= 2000 },
+    { icone: "🌳", titulo: "Guardião da Terra", liberada: pontos >= 80 },
     { icone: "💎", titulo: "Elite Sustentável", liberada: false },
     { icone: "🥇", titulo: "Campeão do Mês", liberada: false },
   ];

@@ -14,20 +14,15 @@ export default function Equipe() {
         <ParticipantesCards nome="Luigi Tormim" rm="572424" turma="1TDSPH" email="luigitormim27@gmail.com"
           foto="/equipe/luigi-tormim.png" github="https://github.com/LuigiT2703"
           linkedin="https://www.linkedin.com/in/luigi-tormim-b64738393" />
-        <ParticipantesCards nome="Pedro Salvatore" rm="569497" turma="1TDSPH" email="pedrosalvatore2112@gmail.com"
-          foto="/equipe/pedro-salvatore.png" github="https://github.com/Pedro-H-Salvatore"
-          linkedin="https://www.linkedin.com/in/pedro-salvatore-a4a2763b7/" />
         <ParticipantesCards nome="Gabriel Tavares" rm="571113" turma="1TDSPV" email="gabriel.stavares05@gmail.com"
           foto="/equipe/gabriel-tavares.png" github="https://github.com/gabristavares"
           linkedin="https://www.linkedin.com/in/gabrielst1005" />
         <ParticipantesCards nome="Cauã de Souza" rm="573349" turma="1TDSPH" email="Cauadesouzavasconcellos@gmail.com"
           foto="/equipe/caua-de-souza.png" github="https://github.com/cauadesouzavasconcellos-byte"
           linkedin="https://www.linkedin.com/in/cauã-souza-b92261395" />
-        <div className="md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)]">
-          <ParticipantesCards nome="Leonardo De Souza Bernard" rm="570951" turma="1TDSPV" email="sbleonardo@icloud.com"
-            foto="/equipe/leonardo-bernard.png" github="https://github.com/bernardleonardo"
-            linkedin="https://www.linkedin.com/in/leonardo-de-souza-573306410" />
-        </div>
+        <ParticipantesCards nome="Leonardo De Souza Bernard" rm="570951" turma="1TDSPV" email="sbleonardo@icloud.com"
+          foto="/equipe/leonardo-bernard.png" github="https://github.com/bernardleonardo"
+          linkedin="https://www.linkedin.com/in/leonardo-de-souza-573306410" />
       </section>
     </main>
   );
